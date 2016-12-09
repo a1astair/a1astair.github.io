@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comcast Fiber Allocation Tool</title>
+  <link rel="shortcut icon" href="favicon.ico"> 
+  <link rel="stylesheet" href="./assets/bundle.css">
+</head>
+<body>
+<div id="root"></div>
+<script type="text/javascript">
+  if (!window.foundationReload) {
+    window.foundationReload = function(target) {
+      if (target === undefined) {
+        $(document).foundation();
+      } else {
+        $(target).foundation();
+      }
+    }
+  }
+
+  if (!window.toggleFoundationAccordion) {
+    window.closeFoundationAccordion = function(target) {
+      if (target !== undefined) {
+        //Trigger a click to close the target accordion
+        $(".accordion-title"+target).click();
+        //http://foundation.zurb.com/sites/docs/accordion.html#js-functions
+        //They dont work
+        //$('#element').foundation('toggle', $target);
+      }
+    }
+  }
+  if (!window.foundationReInitialize) {
+    window.foundationReInitialize = function() {
+      setTimeout(function(){
+        //set a Timeout so this function actually works
+        window.Foundation.reInit($('#DashboardAccordion'));
+      }, 100);
+    }
+  }
+
+</script>
+<script src="./assets/bundle.js"></script>
+</body>
+</html>
