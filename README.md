@@ -1,7 +1,7 @@
 # Alastair Beaumont's Web Portfolio
 
 ## Overview
-This React-Redux app that uses Foundation for a styling sheet and webpack to build with hot loading!
+This React-Redux app that uses Foundation for a styling sheet and webpack to build with hot reloading!
 
 
 ## What's in this package?
