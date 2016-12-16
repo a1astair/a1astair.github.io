@@ -5,6 +5,16 @@ $break-small: 638px;
   @include mui-animation(fade(in));
   animation-duration: 5s;
 }
+#footer {
+  bottom: 0;
+}
+
+.title {
+  color: #000000;
+}
+.title:hover {
+  color: #666666;
+}
 
 @media screen and (max-width: $break-small) {
   .fa-5x {

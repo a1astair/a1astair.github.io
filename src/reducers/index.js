@@ -6,10 +6,29 @@ export const STATUS_PENDING = '_PENDING';
 export const STATUS_FULFILLED = '_FULFILLED';
 export const STATUS_REJECTED = '_REJECTED';
 
-const INITIAL_STATE = {
+const INITIAL_USER_STATE = {
+    year: null,
 }
 
-function userReducer(state = INITIAL_STATE, action) {
+const INITIAL_STREAM_STATE = {
+}
+
+function userReducer(state = INITIAL_USER_STATE, action) {
+  switch (action.type) {
+    case ActionTypes.GET_YEAR: {
+      return {
+        ...state,
+        year: new Date().getFullYear()
+      };
+    }
+
+    default:
+      return state;
+  }
+}
+
+//This will be the stream state reducer
+function streamReducer(state = INITIAL_STREAM_STATE, action) {
   switch (action.type) {
     // case ActionTypes.CREATE_REQUEST + STATUS_PENDING:
     //   return {

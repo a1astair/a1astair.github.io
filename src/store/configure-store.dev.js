@@ -6,6 +6,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 import createLogger from 'redux-logger';
 import rootReducer from '../reducers';
 import customMiddleware from '../middleware';
+import {getYear} from '../actions';
 
 export default function configureStore(initialState) {
   const store = createStore(
@@ -28,5 +29,6 @@ export default function configureStore(initialState) {
     });
   }
 
+  store.dispatch(getYear())
   return store;
 }

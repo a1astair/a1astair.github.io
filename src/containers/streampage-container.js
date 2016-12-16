@@ -1,25 +1,20 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import Dashboard from '../components/dashboard'
+import Streampage from '../components/streampage'
 
-class PageDashboard extends Component {
+class PageStreampage extends Component {
 
   render() {
     return (
-      <Dashboard
-        year={this.props.year}
+      <Streampage
       />
     )
   }
 }
 
-PageDashboard.propTypes = {
-}
-
 const mapStateToProps = (state) => {
   return {
-    year: state.user.year
   }
 }
 
@@ -28,4 +23,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PageDashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(PageStreampage)

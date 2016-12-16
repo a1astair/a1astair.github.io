@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from '../reducers'
 import customMiddleware from '../middleware'
-import { checkIsEditor, loadRoles } from '../actions';
+import { getYear } from '../actions';
 
 export default function configureStore(initialState) {
   const store = createStore(
@@ -16,5 +16,6 @@ export default function configureStore(initialState) {
 
   syncHistoryWithStore(browserHistory, store);
 
+  store.dispatch(getYear())
   return store;
 }
