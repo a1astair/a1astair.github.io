@@ -36,12 +36,6 @@ var config = {
         test: /\.(jpe?g|png|gif)$/,
         loader: "file"
       },
-      // {
-      //   //favicon https://github.com/coryhouse/react-slingshot/pull/129/files
-      //   //Doesn't seem to work
-      //   test: /\.ico$/,
-      //   loader: 'file-loader?name=[name].[ext]'
-      // },
       {
         // for some modules like foundation
         test: /\.scss$/,

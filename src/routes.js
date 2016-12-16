@@ -5,7 +5,6 @@ import App from './containers/app'
 import Dashboard from './containers/dashboard-container'
 
 import { RouterPaths } from './config'
-console.log(RouterPaths.ROOT)
 export default (
   <Route path={RouterPaths.ROOT} component={App}>
     <IndexRoute component={Dashboard}/>

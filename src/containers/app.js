@@ -1,12 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Navigation from '../components/navigation'
 
 import '../styles/index.css'
 import '../styles/foundation.scss'
-
-//Favicon https://github.com/coryhouse/react-slingshot/issues/128
-// require('../images/favicon.ico')
 
 // load jquery and foundation in the window scope
 import 'script!jquery'
@@ -30,13 +26,8 @@ class App extends Component {
     // children are components which defined in the routes as children of App
     const { children } = this.props
     return (
-      <div className='fader'>
-        <Navigation />
-        <div className='row'>
-          <div className='large-12 columns'>
-            {this.props.children}
-          </div>
-        </div>
+      <div>
+        {this.props.children}
       </div>
     )
   }

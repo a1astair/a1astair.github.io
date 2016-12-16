@@ -16,10 +16,10 @@
     "postcss"
   ],
   "scripts": {
-    "start": "set NODE_ENV=development && webpack-dev-server --inline --hot --content-base build/ --port 8100",
-    "build.prod": "set NODE_ENV=production && webpack --config webpack.config.js -p"
+    "start": "set NODE_ENV=development && webpack-dev-server --inline --hot --content-base build/ --port 8100 --progress --colors",
+    "build.prod": "set NODE_ENV=production && webpack --config webpack.config.js -p --progress --colors"
   },
-  "author": "Forte Consulting",
+  "author": "Alastair Beaumont",
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",

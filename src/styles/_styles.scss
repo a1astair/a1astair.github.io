@@ -1,15 +1,13 @@
-$topbar-background: #FFF;
-
-$table-background: #EEE;
-
-$table-color-scale: 10%;
-
-$table-head-background: darken($table-background, $table-color-scale);
-
-$frontPageWidth: 350px;
+$break-small: 638px;
 
 //Fade in on page load
 .fader {
   @include mui-animation(fade(in));
   animation-duration: 5s;
+}
+
+@media screen and (max-width: $break-small) {
+  .fa-5x {
+    font-size: 3em;
+  }
 }
