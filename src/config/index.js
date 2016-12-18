@@ -15,5 +15,7 @@ export const ActionTypes = {
   GET_YEAR: 'GET_YEAR'
 }
 
-export const LOAD_TEAMS_WEB_SERVICE_URL = "/stream/api/sport"
-export const GET_LINK_WEB_SERVICE_URL = "/stream/api"
+export const website = `https://www.a1astair.ca`
+
+export const GET_TEAMS_WEB_SERVICE_URL = (subreddit) => `${website}/stream/api/sport?subreddit=${subreddit}`
+export const GET_LINK_WEB_SERVICE_URL = (subreddit, team) => `${website}/stream/api?subreddit=${subreddit}&team=${team}`

@@ -27,7 +27,7 @@ export default class SelectField extends Component {
         <div className="small-8 columns">
           <select ref={name} value={value} onChange={doBothOnChange}>
             { emptyValue }
-            {(optionList !== undefined) && optionList.map(current => (
+            {(optionList !== null) && optionList.map(current => (
               <option key={current.value} value={current.value}>{current.name}</option>))}
           </select>
         </div>

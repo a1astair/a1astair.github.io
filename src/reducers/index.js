@@ -12,14 +12,25 @@ const INITIAL_USER_STATE = {
 }
 
 const INITIAL_STREAM_STATE = {
-  sports: {
-    nhlstreams: 'Hockey',
-    soccerstreams: 'Soccer',
-    nflstreams: 'Football',
-    mlbstreams: 'Baseball'
-  },
-  teams: null,
-  link: null,
+  sports: [{
+      value: 'soccerstreams',
+      name: 'Soccer'
+    },{
+      value: 'nhlstreams',
+      name: 'Hockey'
+    },{
+      value: 'nflstreams',
+      name: 'Football'
+    },{
+      value: 'mlbstreams',
+      name: 'Baseball'
+    },
+  ],
+  teams: [{
+    value: 'waiting',
+    name: 'Waiting...'
+  }],
+  link: 'Waiting...',
   inProgress: false,
   error: null,
 }
@@ -45,6 +56,8 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
       return {
         ...state,
         inProgress: true,
+        teams: null,
+        link: null,
       };
     case ActionTypes.GET_TEAMS + STATUS_FULFILLED:
       return {
@@ -62,6 +75,8 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
       return {
         ...state,
         inProgress: true,
+        teams: null,
+        link: null,
       };
     case ActionTypes.GET_LINK + STATUS_FULFILLED:
       return {

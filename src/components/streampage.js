@@ -13,7 +13,7 @@ class Streampage extends Component {
   }
 
   render() {
-    const copyRight = `© Copyright ${this.props.year} Alastair Beaumont`
+    const { sports, teams, link, onSelectSport, onSelectTeam } = this.props
     return (
       <div className="off-canvas-wrapper">
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
@@ -35,7 +35,7 @@ class Streampage extends Component {
            <hr/>
            <div className="row">
               <div className="small-12 columns text-center">
-                <h3>Stream Finder 2.0</h3>
+                <h3>Stream Finder v3.0</h3>
               </div>
             </div>
             <div className="row">
@@ -51,18 +51,18 @@ class Streampage extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="small-4 columns small-offset-4">
-                  <Field name="sports" component="selectField" type="text"/>
+              <div className="small-12 columns">
+                  <Field name="sports" label="Pick a Sport" component={selectField} onChange={onSelectSport} optionList={sports}/>
               </div>
             </div>
             <div className="row">
-              <div className="small-4 columns small-offset-4">
-                  <Field name="teams" component="selectField" type="text"/>
+              <div className="small-12 columns">
+                  <Field name="teams" label="Pick a Team" component={selectField} props={{notNull: true}} onChange={onSelectTeam} optionList={teams}/>
               </div>
             </div>
             <div className="row">
-              <div className="small-4 columns small-offset-4">
-                  <Field name="link" component="hardcoded" type="text"/>
+              <div className="small-12 columns">
+                  <Field name="link" label="Stream Link" component={hardcoded}/>
               </div>
             </div>
           </div>
