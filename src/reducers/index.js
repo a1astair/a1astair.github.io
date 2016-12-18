@@ -60,11 +60,19 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
         link: null,
       };
     case ActionTypes.GET_TEAMS + STATUS_FULFILLED:
+      const distinctTeams = action.payload.data.filter((elem, pos, arr) => {
+        return arr.indexOf(elem) == pos;
+      })
+
       return {
         ...state,
         inProgress: false,
-        teams: action.payload
-      };
+        selectedSubreddit: action.payload.selectedSubreddit,
+        teams: distinctTeams.map((current) => {
+          return {name: current, value: current}
+        })
+      }
+
     case ActionTypes.GET_TEAMS + STATUS_REJECTED:
       return {
         ...state,
@@ -82,7 +90,7 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
       return {
         ...state,
         inProgress: false,
-        link: action.payload
+        link: action.payload.data
       };
     case ActionTypes.GET_LINK + STATUS_REJECTED:
       return {

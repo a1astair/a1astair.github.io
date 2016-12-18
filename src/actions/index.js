@@ -9,11 +9,11 @@ export function getYear() {
 
 export function getTeams(subreddit) {
   return dispatch => {
-    dispatch({type: ActionTypes.GET_TEAMS, payload: axios.get(GET_TEAMS_WEB_SERVICE_URL(subreddit))});
+    dispatch({type: ActionTypes.GET_TEAMS, payload: axios.get(GET_TEAMS_WEB_SERVICE_URL(subreddit)), selectedSubreddit: subreddit});
   }
 }
 
-export function getLink(subreddit, team) {
+export function getLink(team, subreddit = 'soccerstreams') {
   return dispatch => {
     dispatch({type: ActionTypes.GET_LINK, payload: axios.get(GET_LINK_WEB_SERVICE_URL(subreddit, team))});
   }

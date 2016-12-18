@@ -13,7 +13,7 @@ class Streampage extends Component {
   }
 
   render() {
-    const { sports, teams, link, onSelectSport, onSelectTeam } = this.props
+    const { sports, teams, link, onSelectSport, selectedSubreddit, onSelectTeam } = this.props
     return (
       <div className="off-canvas-wrapper">
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
@@ -57,7 +57,7 @@ class Streampage extends Component {
             </div>
             <div className="row">
               <div className="small-12 columns">
-                  <Field name="teams" label="Pick a Team" component={selectField} props={{notNull: true}} onChange={onSelectTeam} optionList={teams}/>
+                  <Field name="teams" label="Pick a Team" component={selectField} onChange={onSelectTeam} optionList={teams}/>
               </div>
             </div>
             <div className="row">
@@ -73,7 +73,8 @@ class Streampage extends Component {
 }
 // Decorate the form component
 Streampage = reduxForm({
-  form: 'streamFinder' // a unique name for this form
+  form: 'streamFinder',
+  enableReinitialize: true,
 })(Streampage);
 
 export default Streampage

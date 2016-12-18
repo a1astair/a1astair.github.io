@@ -12,7 +12,10 @@ export const RouterPaths = {
 };
 
 export const ActionTypes = {
-  GET_YEAR: 'GET_YEAR'
+  GET_YEAR: 'GET_YEAR',
+  GET_TEAMS: 'GET_TEAMS',
+  GET_LINK: 'GET_LINK',
+
 }
 
 export const website = `https://www.a1astair.ca`

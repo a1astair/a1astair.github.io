@@ -13,6 +13,7 @@ class StreampageContainer extends Component {
         sports={this.props.sports}
         teams={this.props.teams}
         onSelectSport={this.props.onSelectSport}
+        selectedSubreddit={this.props.selectedSubreddit}
         onSelectTeam={this.props.onSelectTeam}
       />
     )
@@ -25,14 +26,15 @@ const mapStateToProps = (state) => {
       link: state.stream.link
     },
     sports: state.stream.sports,
+    selectedSubreddit: state.stream.selectedSubreddit,
     teams: state.stream.teams,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSelectSport: dispatch(getTeams(event)),
-    onSelectTeam: dispatch(getLink(event)),
+    onSelectSport: (event) => dispatch(getTeams(event.target.value)),
+    onSelectTeam: (event) => dispatch(getLink(event.target.value)),
   }
 }
 
