@@ -1,13 +1,21 @@
 import {ActionTypes, Roles} from '../config'
 import {routerReducer} from 'react-router-redux'
 import {combineReducers} from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
 export const STATUS_PENDING = '_PENDING';
 export const STATUS_FULFILLED = '_FULFILLED';
 export const STATUS_REJECTED = '_REJECTED';
 
 const INITIAL_USER_STATE = {
-    year: null,
+    copyRight: null,
+    sports: {
+      0: 'Hockey',
+      1: 'Soccer',
+      2: 'Football'
+    },
+    teams: null,
+    link: null,
 }
 
 const INITIAL_STREAM_STATE = {
@@ -18,7 +26,7 @@ function userReducer(state = INITIAL_USER_STATE, action) {
     case ActionTypes.GET_YEAR: {
       return {
         ...state,
-        year: new Date().getFullYear()
+        copyRight: `© Copyright ${new Date().getFullYear()} Alastair Beaumont`
       };
     }
 
@@ -44,6 +52,7 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
 
 const rootReducer = combineReducers({
   routing: routerReducer,
+  form: formReducer,
   user: userReducer,
 });
 

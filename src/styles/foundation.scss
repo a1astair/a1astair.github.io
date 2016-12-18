@@ -1,9 +1,8 @@
 @import 'foundation-sites/scss/foundation';
 //For motion-ui
 @import './node_modules/motion-ui/src/motion-ui';
-@import "styles";
 
 /// include all modules of foundation
 @include foundation-everything(true);
 
-$switch-background: $primary-color;
+@import "styles";

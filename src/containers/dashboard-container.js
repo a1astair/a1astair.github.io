@@ -8,7 +8,7 @@ class PageDashboard extends Component {
   render() {
     return (
       <Dashboard
-        year={this.props.year}
+        copyRight={this.props.copyRight}
       />
     )
   }
@@ -19,7 +19,7 @@ PageDashboard.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    year: state.user.year
+    copyRight: state.user.copyRight
   }
 }
 
