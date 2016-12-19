@@ -15,7 +15,7 @@ export default class Dashboard extends Component {
         <div className="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas="" data-position="left" aria-hidden="true" data-offcanvas="y7t9hf-offcanvas">
           <div className="row column">
             <br/>
-            <img className="thumbnail" src={profilePic}/>
+            <img className="thumbnail profile" src={profilePic}/>
             <h5 className="text-center">Contact Info</h5>
             <p className="linkToBlack">
               <a href="mailto:a.beaumon11@gmail.com?Subject=Awesome%20Website!">
