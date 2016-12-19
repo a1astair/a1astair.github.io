@@ -14,6 +14,7 @@ export const RouterPaths = {
 export const ActionTypes = {
   GET_YEAR: 'GET_YEAR',
   GET_TEAMS: 'GET_TEAMS',
+  SET_SUBREDDIT: 'SET_SUBREDDIT',
   GET_LINK: 'GET_LINK',
 
 }

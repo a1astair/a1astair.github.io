@@ -5,6 +5,7 @@ import {RouterPaths} from "../config";
 import TitleAndMenu from './titleAndMenu';
 import { Field, reduxForm } from 'redux-form';
 import selectField from './form/select-field'
+import selectFieldDisabled from './form/select-field-disabled'
 import hardcoded from './form/text-field-hardcoded'
 
 class Streampage extends Component {
@@ -12,8 +13,21 @@ class Streampage extends Component {
     super();
   }
 
+  sportPicked(event) {
+    if (event.target.value !== '' && event.target.value !== 'undefined') {
+      this.props.onSelectSport(event.target.value)
+      this.props.pickedSubreddit(event.target.value)
+    }
+
+  }
+  teamPicked(event) {
+    if (event.target.value !== '' && event.target.value !== 'undefined') {
+      this.props.onSelectTeam(this.props.selectedSubreddit, event.target.value)
+    }
+  }
+
   render() {
-    const { sports, teams, link, onSelectSport, selectedSubreddit, onSelectTeam } = this.props
+    const { sports, teams, link, onSelectSport, selectedSubreddit, onSelectTeam, noTeams } = this.props
     return (
       <div className="off-canvas-wrapper">
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
@@ -52,17 +66,17 @@ class Streampage extends Component {
             </div>
             <div className="row">
               <div className="small-12 columns">
-                  <Field name="sports" label="Pick a Sport" component={selectField} onChange={onSelectSport} optionList={sports}/>
+                  <Field name="sports" label="Pick a Sport" component={selectField} onChange={(event) => this.sportPicked(event)} optionList={sports}/>
               </div>
             </div>
             <div className="row">
               <div className="small-12 columns">
-                  <Field name="teams" label="Pick a Team" component={selectField} onChange={onSelectTeam} optionList={teams}/>
+                  <Field name="teams" label="Pick a Team" component={(noTeams) ? selectFieldDisabled : selectField} onChange={(event) => this.teamPicked(event)} optionList={teams}/>
               </div>
             </div>
             <div className="row">
               <div className="small-12 columns">
-                  <Field name="link" label="Stream Link" component={hardcoded}/>
+                  <Field name="link" label="Stream Link" props={{gotLink: link}} component={hardcoded}/>
               </div>
             </div>
           </div>

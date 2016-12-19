@@ -15,7 +15,8 @@ const INITIAL_STREAM_STATE = {
   sports: [{
       value: 'soccerstreams',
       name: 'Soccer'
-    },{
+    },
+    {
       value: 'nhlstreams',
       name: 'Hockey'
     },{
@@ -24,12 +25,14 @@ const INITIAL_STREAM_STATE = {
     },{
       value: 'mlbstreams',
       name: 'Baseball'
-    },
+    }
   ],
   teams: [{
     value: 'waiting',
     name: 'Waiting...'
   }],
+  noTeams: false,
+  selectedSubreddit: null,
   link: 'Waiting...',
   inProgress: false,
   error: null,
@@ -56,35 +59,50 @@ function streamReducer(state = INITIAL_STREAM_STATE, action) {
       return {
         ...state,
         inProgress: true,
-        teams: null,
-        link: null,
+        link: 'Waiting...',
+        noTeams: false,
+        teams: [{
+          value: 'waiting',
+          name: 'Waiting...'
+        }]
       };
-    case ActionTypes.GET_TEAMS + STATUS_FULFILLED:
+    case ActionTypes.GET_TEAMS + STATUS_FULFILLED: {
+      if (action.payload.data == 0) {
+        return {
+          ...state,
+          inProgress: false,
+          noTeams: true,
+          teams: [{name: 'No Teams Playing!', value: 'noTeams'}]
+        }
+      }
       const distinctTeams = action.payload.data.filter((elem, pos, arr) => {
         return arr.indexOf(elem) == pos;
       })
-
+      // console.log(action.selectedSubreddit)
       return {
         ...state,
-        inProgress: false,
-        selectedSubreddit: action.payload.selectedSubreddit,
         teams: distinctTeams.map((current) => {
           return {name: current, value: current}
-        })
+        }),
+        inProgress: false,
       }
+    }
 
+    case ActionTypes.SET_SUBREDDIT:
+      return {
+        ...state,
+        selectedSubreddit: action.payload
+      };
     case ActionTypes.GET_TEAMS + STATUS_REJECTED:
       return {
         ...state,
         inProgress: false,
-        error: action.payload
+        error: action.axios.payload
       };
     case ActionTypes.GET_LINK + STATUS_PENDING:
       return {
         ...state,
         inProgress: true,
-        teams: null,
-        link: null,
       };
     case ActionTypes.GET_LINK + STATUS_FULFILLED:
       return {
