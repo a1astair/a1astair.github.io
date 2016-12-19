@@ -3,7 +3,7 @@ let actualRouterPath = "/"
 /* eslint-disable */
 if (process.env.NODE_ENV === 'production') {
 /* eslint-enable */
-  actualRouterPath = "/public/";
+//   actualRouterPath = "/public/";
 }
 
 export const RouterPaths = {
