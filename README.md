@@ -8,6 +8,7 @@ This React-Redux app that uses Foundation for a styling sheet and webpack to bui
 
 - [x] [Redux](http://redux.js.org/)
 - [x] [React](https://facebook.github.io/react/)
+- [x] [Redux-form](https://github.com/erikras/redux-form/)
 - [x] [React-hot-loader](https://github.com/gaearon/react-hot-loader)
 - [x] [react-router-redux](https://github.com/rackt/react-router-redux) (formerly known as redux-simple-router)
 - [x] [redux-devtools](https://github.com/gaearon/redux-devtools)
