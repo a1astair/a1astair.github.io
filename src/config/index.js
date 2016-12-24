@@ -19,7 +19,5 @@ export const ActionTypes = {
 
 }
 
-export const website = `https://www.a1astair.ca`
-
-export const GET_TEAMS_WEB_SERVICE_URL = (subreddit) => `${website}/stream/api/sport?subreddit=${subreddit}`
-export const GET_LINK_WEB_SERVICE_URL = (subreddit, team) => `${website}/stream/api?subreddit=${subreddit}&team=${team}`
+export const GET_TEAMS_WEB_SERVICE_URL = (subreddit) => `/stream/api/sport?subreddit=${subreddit}`
+export const GET_LINK_WEB_SERVICE_URL = (subreddit, team) => `/stream/api?subreddit=${subreddit}&team=${team}`
