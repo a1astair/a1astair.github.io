@@ -12,7 +12,7 @@ export default class FrontPage extends Component {
     <div>
       <div className="row">
         <div className="small-12 medium-6 columns text-center">
-          <p>I am a Computer Science Graduate from the University of Victoria. I love learning new technologies, building software, and web apps!</p>
+          <p>Experienced Software Developer with a demonstrated history of working in the information technology and services industry. I love learning new technologies, building software, and web apps!</p>
         </div>
         <div className="small-12 medium-6 columns text-center">
           <p className="show-for-medium">Check out my Github to see how my projects work. That includes this website and the Stream Finder!</p>
