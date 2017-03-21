@@ -12,18 +12,18 @@ export default class FrontPage extends Component {
     <div>
       <div className="row">
         <div className="small-12 medium-6 columns text-center">
-          <p>Experienced Software Developer with a demonstrated history of working in the information technology and services industry. I love learning new technologies, building software, and web apps!</p>
+          <p>Experienced Software Developer with a demonstrated history of working in the Information Technology and services industry.</p>
         </div>
         <div className="small-12 medium-6 columns text-center">
-          <p className="show-for-medium">Check out my Github to see how my projects work. That includes this website and the Stream Finder!</p>
+          <p>I love learning new technologies, building software and web apps! Check out my Github to see how my projects work. That includes this website and the Stream Finder!</p>
         </div>
       </div>
       <div className="row">
         <div className="small-12 medium-6 columns text-center">
-          <p>Drop me a line using my Contact Info in the Menu Bar or click any of the links below</p>
+          <p className="show-for-medium">The Stream Finder is a web app that uses the Reddit API to find streams for the sport of your choice!</p>
         </div>
         <div className="small-12 medium-6 columns text-center show-for-medium-up">
-          <p className="show-for-medium">The Stream Finder is a web app that uses the Reddit API to find streams for the sport of your choice!</p>
+          <p className="show-for-medium">Drop me a line using my Contact Info in the Menu Bar or click any of the links below</p>
         </div>
       </div>
       <br/>
