@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
 
   render() {
     return (
-      <div className="off-canvas-wrapper">
+      <div className="off-canvas-wrapper fader">
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
           <TitleAndMenu/>
           <div className="off-canvas-content" data-off-canvas-content="">
