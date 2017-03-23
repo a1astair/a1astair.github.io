@@ -8,7 +8,7 @@ var PRODUCTION = "production";
 
 var environment = process.env.NODE_ENV ? process.env.NODE_ENV.trim() : DEVELOPMENT;
 
-var publicPath = (environment === PRODUCTION) ? '/public/assets/' : '/assets/';
+var publicPath = (environment === PRODUCTION) ? '/assets/' : '/assets/';
 var absolutePath = path.join(__dirname, 'build', 'assets');
 
 var config = {
