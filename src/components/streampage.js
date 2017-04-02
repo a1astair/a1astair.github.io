@@ -9,8 +9,10 @@ import selectFieldDisabled from './form/select-field-disabled'
 import hardcoded from './form/text-field-hardcoded'
 
 class Streampage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.sportPicked = this.sportPicked.bind(this);
+    this.teamPicked = this.teamPicked.bind(this);
   }
 
   sportPicked(event) {
@@ -27,7 +29,7 @@ class Streampage extends Component {
   }
 
   render() {
-    const { sports, teams, link, onSelectSport, selectedSubreddit, onSelectTeam, noTeams } = this.props
+    const { sports, teams, link, onSelectSport, selectedSubreddit, onSelectTeam, noTeams, handleSubmit } = this.props
     return (
       <div className="off-canvas-wrapper">
         <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
@@ -47,38 +49,42 @@ class Streampage extends Component {
                </div>
              </div>
            <hr/>
-           <div className="row">
-              <div className="small-12 columns text-center">
-                <h3>Stream Finder v3.0</h3>
+           <form onSubmit={handleSubmit}>
+             <div>
+               <div className="row">
+                  <div className="small-12 columns text-center">
+                    <h3>Stream Finder v3.0</h3>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="small-12 columns text-center">
+                      <p>Welcome to the new and improved Sports Stream Finder!</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="small-12 columns text-center">
+                    <a href="https://github.com/a1astair/Reddit-Sport-Stream-Finder">
+                      <p>Code</p>
+                    </a>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="small-12 columns">
+                      <Field name="sports" label="Pick a Sport" component={selectField} optionList={sports} onChange={e => this.sportPicked(e)} type="text"></Field>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="small-12 columns">
+                      <Field name="teams" label="Pick a Team" component={selectField} optionList={teams} onChange={e => this.teamPicked(e)} type="text"></Field>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="small-12 columns">
+                      <Field name="link" label="Stream Link" props={{gotLink: link}} component={hardcoded} type="text"></Field>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="small-12 columns text-center">
-                  <p>Welcome to the new and improved Sports Stream Finder!</p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="small-12 columns text-center">
-                <a href="https://github.com/a1astair/Reddit-Sport-Stream-Finder">
-                  <p>Code</p>
-                </a>
-              </div>
-            </div>
-            <div className="row">
-              <div className="small-12 columns">
-                  <Field name="sports" label="Pick a Sport" component={selectField} onChange={(event) => this.sportPicked(event)} optionList={sports}/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="small-12 columns">
-                  <Field name="teams" label="Pick a Team" component={(noTeams) ? selectFieldDisabled : selectField} onChange={(event) => this.teamPicked(event)} optionList={teams}/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="small-12 columns">
-                  <Field name="link" label="Stream Link" props={{gotLink: link}} component={hardcoded}/>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -86,9 +92,7 @@ class Streampage extends Component {
   }
 }
 // Decorate the form component
-Streampage = reduxForm({
+export default reduxForm({
   form: 'streamFinder',
   enableReinitialize: true,
-})(Streampage);
-
-export default Streampage
+})(Streampage)

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class SelectField extends Component {
 
   render() {
-    const { input: { name, value }, meta: { invalid }, label, optionList, error, notNull, onChange } = this.props;
+    const { input: { name, value, onChange }, meta: { invalid }, label, optionList, error, notNull } = this.props;
 
     let emptyValue = (<option value="">Select from pulldown....</option>);
     if (notNull) {

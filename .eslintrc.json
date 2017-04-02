@@ -19,6 +19,7 @@
         "accessor-pairs": "error",
         "array-bracket-spacing": "off",
         "array-callback-return": "error",
+        "no-class-assign": "warn",
         "arrow-body-style": "off",
         "arrow-parens": "off",
         "arrow-spacing": [
