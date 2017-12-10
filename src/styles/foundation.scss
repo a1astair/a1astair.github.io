@@ -1,8 +1,0 @@
-@import 'foundation-sites/scss/foundation';
-//For motion-ui
-@import './node_modules/motion-ui/src/motion-ui';
-
-/// include all modules of foundation
-@include foundation-everything(true);
-
-@import "styles";
