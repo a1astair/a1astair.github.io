@@ -16,8 +16,8 @@
     "postcss"
   ],
   "scripts": {
-    "start": "set NODE_ENV=development && webpack-dev-server --inline --hot --content-base build/ --port 8100 --progress --colors",
-    "build.prod": "set NODE_ENV=production && webpack --config webpack.config.js -p --progress --colors"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --content-base build/ --port 8100 --progress --colors",
+    "build.prod": "cross-env NODE_ENV=production webpack --config webpack.config.js -p --progress --colors"
   },
   "author": "Alastair Beaumont",
   "license": "ISC",
@@ -58,6 +58,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "cross-env": "^5.1.1",
     "css-loader": "^0.23.1",
     "eslint": "^3.11.1",
     "eslint-config-standard": "^6.2.0",
