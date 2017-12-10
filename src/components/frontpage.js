@@ -55,10 +55,10 @@ export default class FrontPage extends Component {
         </div>
         <br/>
         <div className="small-6 medium-3 columns text-center">
-          <Link to={RouterPaths.STREAM}>
-            <i className="fa fa-futbol-o fa-5x" aria-hidden="true"></i>
+            <i className="fa fa-futbol-o fa-5x" aria-hidden="true" style={{color: `lightgray`}}></i>
             <p>Stream Finder</p>
-          </Link>
+          {/* <Link to={RouterPaths.STREAM}>
+          </Link> */}
         </div>
       </div>
     </div>

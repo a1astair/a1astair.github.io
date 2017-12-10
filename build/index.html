@@ -36,25 +36,6 @@
       }
     }
   }
-
-  if (!window.toggleFoundationAccordion) {
-    window.closeFoundationAccordion = function(target) {
-      if (target !== undefined) {
-        //Trigger a click to close the target accordion
-        $(".accordion-title"+target).click();
-
-      }
-    }
-  }
-  if (!window.foundationReInitialize) {
-    window.foundationReInitialize = function() {
-      setTimeout(function(){
-        //set a Timeout so this function actually works
-        window.Foundation.reInit($('#DashboardAccordion'));
-      }, 100);
-    }
-  }
-
 </script>
 <script src="./assets/bundle.js"></script>
 </body>
