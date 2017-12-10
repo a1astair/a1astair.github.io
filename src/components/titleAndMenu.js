@@ -18,7 +18,7 @@ export default class Dashboard extends Component {
             <img className="thumbnail profile" src={profilePic}/>
             <h5 className="text-center">Contact Info</h5>
             <p className="linkToBlack">
-              <a href="mailto:a.beaumon11@gmail.com?Subject=Awesome%20Website!">
+              <a href="mailto:a.beaumont11@gmail.com?Subject=Awesome%20Website!">
                 <i className="fa fa-envelope" aria-hidden="true"></i> a.beaumont11@gmail.com
               </a>
             </p>
