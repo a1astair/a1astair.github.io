@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/a1astair
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alastairbeaumont.com
+  * I am a1astair (https://keybase.io/a1astair) on keybase.
+  * I have a public key with fingerprint 15CD 199D 5D9F B497 612D  28B2 E285 5814 3FD2 DD25
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101cc30a7cea2d760ebf1756b942a433b2f19dc59a53c92244879a3dab3722aedc30a",
+      "fingerprint": "15cd199d5d9fb497612d28b2e28558143fd2dd25",
+      "host": "keybase.io",
+      "key_id": "e28558143fd2dd25",
+      "kid": "0101cc30a7cea2d760ebf1756b942a433b2f19dc59a53c92244879a3dab3722aedc30a",
+      "uid": "2fb00778d627512dd0b74c385f843f19",
+      "username": "a1astair"
+    },
+    "merkle_root": {
+      "ctime": 1512962149,
+      "hash_meta": "1ee6336f897c211e258f02b76c296cd831dd1ca436bcfdddde14c60653aed1e5",
+      "seqno": 1799883
+    },
+    "revoke": {
+      "sig_ids": [
+        "2926efa001a695a38e6756533b3baf4048f967ec5139dbbf4581121a7c46a33e0f"
+      ]
+    },
+    "service": {
+      "hostname": "alastairbeaumont.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1512962151,
+  "expire_in": 157680000,
+  "prev": "df8a649acd246892e6dd4a198226f32325a3593106ea0b8af3ae4fb8242f67e4",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMK3AnicrZNtiBVVHMZn0y3dijY/FMiSOURJ7Mqc1znnRmxo9CFXC1cIXHU4r3en
+u/fO3Zm5tza7EhkrvYhLZQaV4IeykkU0sqDUxRKMtZAlSlDM0iKlCNkMK8LObAkR
+fex8GWZ4/s//eX4z8/H1s7yOttKeTb/w/OS+tslDGxre6p5L5fW+TPSIX1rvV8zM
+xQxpk+VRJdZ+yQ9AAJRCgQiVEVCHNDDSgpBQyTEUGCEJLeBaES4IUhxCjFnIBdJC
+ohBCYXQx7Hf7Nq6VTVpP41rubAFRGnCuieZWYh5SADVkEhrICGEAI6uh1pC4wcEk
+KyZcOCkyszhO3DN3E83E+w/9/5y7MWMHrQyCMGSawpC4rDqQIVaIEcvcbsALYWbS
+mqgapxZAZLmIU7/V7VdNWhkyUZokeQFX5XEhAc6EUwgwdwVFNhhVTS4KLsZQhKhl
+PFQQAAMJswGUIVVOrjRDQGugXH4qldXuGIAVDShBLjEwRf/MDNcStyHknDHkEqSm
+mVRMsTyLyw5b5pcGfMghNVYEARCUE4GYoQ4OcVyQFBYHmFlOQ6MIQFxLabGjDCBw
+ODEVCJnA+mtbxbK0GasZ8+I9Xek/9Fd/aUSjmtTyxSqpumT1NMkTlQw5xWCe17NS
+wScfqRcjjxgZ/W0Wybim3dfiJpomzeKk5to45b/QEdDtm0frcWqiuFCQkLLAnWKP
+aTpLbZmgmAulIaaMQ0O1xgJwBiG1CCLoahOOQECNCCQT1jHEVjKIoXXV8T9YulW5
+KDtPR7Am8kZq/NahiTWzvbYO7+r2q4rfyOuY23nl5zo965rLfa/2jGXPAJntfnhp
+ZaB3VC1f6MXdXwy+fuOCOf3v7Hxrx9GfNt/d3/bjHH/s+97tz754fBW798lNU8N6
+3+12//ZtGw8/ffTaO9L6c+PRS/U3ho+sGF913eOXT/4w/8POU+8t3WNb+FL/+c73
+n5eNZWdG9/ZEvw4vgNl489hXB47N2/hB+Jq3bNvIukX39dHJO7vat3zyxOSSN7+e
+PXa46yKlF15Zue7Mzeefii9MT/dNeUumfz810a7333rXzsfuObemdbH8uWL+Qw9s
+XTgwtcg7ftu7vbv1LTd17nj74K4Hz57dErzc1fPlC1vn3iA6Tp9b8cdnaye+W/5p
+7/2rV47+fCKav/m3Kf/bj745EW34E0v8hEQ=
+=muFY
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/a1astair
+
+==================================================================
